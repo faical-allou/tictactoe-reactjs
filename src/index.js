@@ -40,12 +40,16 @@ class Board extends React.Component {
       } else {
         styling_[i] = 'square Ostyle';
       }
-      
+      if (this.state.squares[i] != null) 
+        {alert("STOP CHEATING")} 
+        else {
+
       this.setState({
           squares: squares_,
           xIsNext: !this.state.xIsNext,
           styling: styling_,
         })
+      }
   }
 
   handleClick_R() {
